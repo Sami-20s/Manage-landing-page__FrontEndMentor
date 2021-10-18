@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import "./style/style.scss";
+import ContextProvider from "./context";
 
 ReactDOM.render(
     <React.StrictMode>
