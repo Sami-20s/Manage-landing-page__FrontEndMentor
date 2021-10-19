@@ -1,3 +1,4 @@
+// Global Rules
 *,
 *::after,
 *::before {
@@ -9,16 +10,67 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Be Vietnam", sans-serif;
+    font-size: 1rem;
 }
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+// Container For Both Desktop & Mobile
 .container {
-    padding: 0 160px;
-    margin: 0 auto;
-    &-pl {
-        padding-left: 160px;
+    @include breakpoint-up(large) {
+        padding: 55px 160px;
+        margin: 0 auto;
+        &-pl {
+            padding-left: 160px;
+        }
+        &-pr {
+            padding-right: 160px;
+        }
     }
-    &-pr {
-        padding-right: 160px;
+    @include breakpoint-down(meduim) {
+        padding: 40px 25px;
+        margin: 0 auto;
+        &-pl {
+            padding-left: 40px;
+        }
+        &-pr {
+            padding-right: 40px;
+        }
+    }
+}
+// Classes To Hide And Show Elemnts
+.hide-for-mobile {
+    @include breakpoint-down(meduim) {
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none !important;
+    }
+}
+// Buttons Style
+.btn {
+    display: block;
+    height: 45px;
+    width: 135px;
+    border: solid 1px var(--bright-red);
+    border-radius: 50px;
+    font-weight: 500;
+    background-color: var(--bright-red);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--main-transition);
+    &:hover {
+        opacity: 0.8;
     }
 }
