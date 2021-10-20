@@ -35,6 +35,9 @@ ul {
         &-pr {
             padding-right: 160px;
         }
+        &-px {
+            padding: 0 160px;
+        }
     }
     @include breakpoint-down(meduim) {
         padding: 40px 25px;
@@ -44,6 +47,9 @@ ul {
         }
         &-pr {
             padding-right: 40px;
+        }
+        &-px {
+            padding: 0 40px;
         }
     }
 }
