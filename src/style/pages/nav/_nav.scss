@@ -46,7 +46,7 @@
                     border: solid 2px var(--very-light-gray);
                     border-radius: 8px;
                     box-shadow: 0px 170px 1000px 60px rgba(0, 0, 0, 0.137);
-                    animation: navOpen 1s ease-in-out forwards;
+                    animation: navOpen 0.3s ease-in-out both;
                     li {
                         &:not(:last-child) {
                             margin-right: 0;
